@@ -42,7 +42,7 @@ class Directory extends Component {
             );
         }
         return (
-            <FlatListcd
+            <FlatList
                 data={this.props.campsites.campsites}
                 renderItem={renderDirectoryItem}
                 keyExtractor={item => item.id.toString()}
