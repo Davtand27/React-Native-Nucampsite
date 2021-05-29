@@ -29,8 +29,9 @@ class Favorites extends Component {
     render() {
         const { navigate } = this.props.navigation;
         const renderFavoriteItem = ({item}) => {
+
             return (
-                <SwipeRow rightOpenValue={-100} style={StyleSheet.swipeRow}>
+                <SwipeRow rightOpenValue={-100} style={styles.swipeRow}>
                     <View style={styles.deleteView}>
                         <TouchableOpacity
                             style={styles.deleteTouchable}
@@ -81,7 +82,7 @@ class Favorites extends Component {
             );
         }
         return (
-            <Animatable.View animation="fadeInRightBig" duration={2000}>
+            <Animatable.View animation='fadeInRightBig' duration={2000}>
                 <FlatList
                     data={this.props.campsites.campsites.filter(
                         campsite => this.props.favorites.includes(campsite.id)
